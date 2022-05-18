@@ -2,14 +2,48 @@
   --primary: #502050;
   --secondary: #ee68a4;
   --complementary: #937b92;
-  --neutral-primary: hsl(300, 24%, 96%);
-  --neutral-secondary: hsl(0, 0%, 100%);
+  --neutral-primary: #f7f2f7;
+  --neutral-secondary: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+.rate-container {
+  border-radius: 5px;
+  color: var(--primary);
+  background-color: var(--complementary);
+}
+
+.card {
+  border-radius: 5px;
+  color: var(--neutral-primary);
+  background-color: var(--primary);
+}
+
+.author-container {
+  display: flex;
+}
+
+.author-container img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.author span:nth-child(1) {
+  color: var(--neutral-secondary);
+}
+
+.author span:nth-child(2) {
+  color: var(--secondary);
 }
 
 .attribution {
