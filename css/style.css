@@ -1,5 +1,6 @@
 :root {
   --primary: #502050;
+  --primary-soft: hsla(300, 43%, 22%, 0.1);
   --secondary: #ee68a4;
   --complementary: #937b92;
   --neutral-primary: #f7f2f7;
@@ -15,26 +16,74 @@
 
 body {
   font-size: 15px;
+  line-height: 20px;
 }
 
 main {
-  margin: 40px;
+  margin: 50px;
+}
+
+.text-info-container {
+  text-align: center;
 }
 
 h1 {
+  padding: 10px;
+  font-weight: 700;
+  line-height: initial;
   color: var(--primary);
+}
+
+.text-info-container p {
+  margin: 20px 0px 30px;
+  font-weight: 500;
+  color: var(--complementary);
+}
+
+.main-rate-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .rate-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+  margin: 10px 0px;
+  padding: 10px 10px;
   border-radius: 5px;
+  font-weight: 700;
   color: var(--primary);
-  background-color: var(--complementary);
+  background-color: var(--primary-soft);
 }
 
+.main-rate-container div:nth-child(2) {
+  align-self: center;
+}
+.main-rate-container div:nth-child(3) {
+  align-self: flex-end;
+}
+
+.rate-container figure {
+  width: 100px;
+  height: 25px;
+  background-image: url(../images/icon-star.svg);
+  background-repeat: space no-repeat;
+}
+
+.rate-container p {
+  padding: 0px 30px;
+}
+
+.cards-container {
+  margin-top: 40px;
+}
 .card {
-  padding: 30px;
+  margin: 10px 0px;
+  padding: 20px;
   border-radius: 5px;
-  line-height: 20px;
   color: var(--neutral-primary);
   background-color: var(--primary);
 }
@@ -66,14 +115,15 @@ h1 {
 }
 
 .attribution {
+  margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .attribution a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
