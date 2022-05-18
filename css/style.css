@@ -1,0 +1,26 @@
+:root {
+  --primary: #502050;
+  --secondary: #ee68a4;
+  --complementary: #937b92;
+  --neutral-primary: hsl(300, 24%, 96%);
+  --neutral-secondary: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.attribution a:hover {
+  color: var(--secondary);
+}
