@@ -13,6 +13,14 @@
   font-family: "League Spartan", sans-serif;
 }
 
+body {
+  font-size: 15px;
+}
+
+main {
+  margin: 40px;
+}
+
 h1 {
   color: var(--primary);
 }
@@ -24,18 +32,29 @@ h1 {
 }
 
 .card {
+  padding: 30px;
   border-radius: 5px;
+  line-height: 20px;
   color: var(--neutral-primary);
   background-color: var(--primary);
 }
 
 .author-container {
   display: flex;
+  align-items: center;
+  height: 45px;
+  margin-bottom: 25px;
 }
 
 .author-container img {
-  width: 25px;
+  height: 40px;
   border-radius: 50%;
+}
+
+.author span {
+  display: block;
+  margin-left: 20px;
+  line-height: 18px;
 }
 
 .author span:nth-child(1) {
