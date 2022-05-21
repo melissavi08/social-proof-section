@@ -15,20 +15,30 @@
 }
 
 body {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto 30px;
+  width: 100%;
+  height: 100vh;
   font-size: 15px;
   line-height: 20px;
 }
 
 main {
-  margin: 50px;
+  place-self: center;
+  width: 100%;
+  max-width: 1050px;
+  height: auto;
+  padding: 50px;
 }
 
 .text-info-container {
+  max-width: 400px;
   text-align: center;
 }
 
 h1 {
-  padding: 10px;
+  font-size: 36px;
   font-weight: 700;
   line-height: initial;
   color: var(--primary);
@@ -50,9 +60,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
   max-width: 400px;
   margin: 10px 0px;
-  padding: 10px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   font-weight: 700;
   color: var(--primary);
@@ -62,6 +73,7 @@ h1 {
 .main-rate-container div:nth-child(2) {
   align-self: center;
 }
+
 .main-rate-container div:nth-child(3) {
   align-self: flex-end;
 }
@@ -69,20 +81,30 @@ h1 {
 .rate-container figure {
   width: 100px;
   height: 25px;
+  /* margin-right: 20px; */
   background-image: url(../images/icon-star.svg);
   background-repeat: space no-repeat;
 }
 
 .rate-container p {
-  padding: 0px 30px;
+  flex-basis: 200px;
 }
 
 .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  justify-content: center;
+  height: auto;
+  min-height: 300px;
   margin-top: 40px;
 }
+
 .card {
+  flex: 1 1 300px;
+  max-width: 300px;
   margin: 10px 0px;
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 5px;
   color: var(--neutral-primary);
   background-color: var(--primary);
@@ -126,4 +148,39 @@ h1 {
 
 .attribution a:hover {
   color: var(--primary);
+}
+
+@media (min-width: 820px) {
+  .info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  .text-info-container {
+    padding-right: 40px;
+    text-align: initial;
+  }
+
+  .text-info-container p {
+    margin: 10px 0px 0px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .card:nth-child(2) {
+    align-self: center;
+  }
+
+  .card:nth-child(3) {
+    align-self: flex-end;
+  }
 }
