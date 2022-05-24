@@ -25,11 +25,14 @@ body {
 }
 
 main {
-  place-self: center;
   width: 100%;
   max-width: 1050px;
-  height: auto;
   padding: 50px;
+}
+
+.info-container {
+  display: grid;
+  place-items: center;
 }
 
 .text-info-container {
@@ -54,6 +57,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 610px;
 }
 
 .rate-container {
@@ -68,6 +72,10 @@ h1 {
   font-weight: 700;
   color: var(--primary);
   background-color: var(--primary-soft);
+}
+
+.main-rate-container div:nth-child(1) {
+  align-self: flex-start;
 }
 
 .main-rate-container div:nth-child(2) {
@@ -95,13 +103,11 @@ h1 {
   flex-wrap: wrap;
   column-gap: 24px;
   justify-content: center;
-  height: auto;
   min-height: 300px;
   margin-top: 40px;
 }
 
 .card {
-  flex: 1 1 300px;
   max-width: 300px;
   margin: 10px 0px;
   padding: 30px 20px;
