@@ -168,6 +168,9 @@ h1 {
 }
 
 .attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
