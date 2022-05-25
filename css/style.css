@@ -64,18 +64,16 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 20px;
   width: 100%;
   max-width: 400px;
+  min-height: 50px;
   margin: 10px 0px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   font-weight: 700;
   color: var(--primary);
   background-color: var(--primary-soft);
-}
-
-.main-rate-container div:nth-child(1) {
-  align-self: flex-start;
 }
 
 .main-rate-container div:nth-child(2) {
@@ -87,15 +85,17 @@ h1 {
 }
 
 .rate-container figure {
+  justify-self: center;
+  margin-bottom: 10px;
   width: 100px;
-  height: 25px;
-  /* margin-right: 20px; */
+  height: 16px;
   background-image: url(../images/icon-star.svg);
   background-repeat: space no-repeat;
 }
 
 .rate-container p {
   flex-basis: 200px;
+  text-align: center;
 }
 
 .cards-container {
@@ -156,15 +156,30 @@ h1 {
   color: var(--primary);
 }
 
+@media (min-width: 460px) {
+  .rate-container {
+    justify-content: flex-start;
+    padding-right: 0px;
+  }
+
+  .rate-container figure {
+    margin-bottom: 0px;
+  }
+
+  .rate-container p {
+    text-align: initial;
+  }
+}
+
 @media (min-width: 820px) {
   .info-container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 40px;
+    column-gap: 20px;
   }
 
   .text-info-container {
+    justify-self: flex-start;
     padding-right: 40px;
     text-align: initial;
   }
